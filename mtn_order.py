@@ -47,7 +47,7 @@ def generate_response(user_input):
     user_input = user_input.lower()
     
     if any(word in user_input for word in ["hello", "hi", "hey"]):
-        return "Hello! Welcome to MTN Ghana. How can I help you today?"
+        return "Hello! Welcome to Order System. How can I help you today?"
     elif "menu" in user_input or "products" in user_input:
         return "Our products are organized by categories. Please select a category from the sidebar to view available products."
     elif "price" in user_input or "how much" in user_input:
@@ -101,7 +101,7 @@ def cancel_order(order_id):
 
 def admin_login():
     """Admin login page"""
-    st.title("MTN Admin Login")
+    st.title(" Admin Login")
     
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
@@ -117,7 +117,7 @@ def admin_login():
 
 def admin_dashboard():
     """Admin dashboard"""
-    st.title("MTN Admin Dashboard")
+    st.title(" Admin Dashboard")
     
     tab1, tab2 = st.tabs(["Orders", "Products"])
     
@@ -349,4 +349,5 @@ def main():
         user_interface()
 
 if __name__ == "__main__":
+
     main()
